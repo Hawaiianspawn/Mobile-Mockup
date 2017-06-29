@@ -92,6 +92,7 @@
     <Compile Include="Assets\BLACKISH\SwipeControl\Scripts\C#\ImageDisplayXYVertical.cs" />
     <Compile Include="Assets\BLACKISH\SwipeControl\Scripts\C#\SwipeControl.cs" />
     <Compile Include="Assets\BLACKISH\SwipeControl\Scripts\C#\SwipeControlXY.cs" />
+    <Compile Include="Assets\BUMP\Tree\TreeSmack.cs" />
     <Compile Include="Assets\Scripts\Debuggers\TouchTest.cs" />
     <Compile Include="Assets\Scripts\Mechanics\BoxColliderWin.cs" />
     <Compile Include="Assets\Scripts\Mechanics\DragBasedScreen.cs" />

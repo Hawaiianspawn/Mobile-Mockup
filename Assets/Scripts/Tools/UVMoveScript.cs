@@ -6,6 +6,7 @@ public class UVMoveScript : MonoBehaviour {
 
     public float ScrollSpeed;
     public bool Randomize;
+    private float RandomRatio = 1f;
     private float Offset;
     private float waveMath;
     private Renderer RenderUV;
@@ -18,8 +19,13 @@ public class UVMoveScript : MonoBehaviour {
     {
         //float RandomRatio = 1;
         if (Randomize)
-            //RandomRatio = Random.Range(.5f,1.5f);            
-        Offset += (Time.deltaTime * ScrollSpeed) / 10;
+        {
+            RandomRatio = (Mathf.Sin(Time.time));
+            if (RandomRatio < 0)
+                RandomRatio = -(RandomRatio);
+            RandomRatio += .1f;
+        }           
+        Offset += ((Time.deltaTime * ScrollSpeed) / 10) * RandomRatio;
         RenderUV.material.SetTextureOffset("_MainTex", new Vector2(0, Offset));
     }
 }

@@ -98,10 +98,12 @@
     <Compile Include="Assets\Scripts\Mechanics\DragBasedScreen.cs" />
     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\Tools\LimitChildren.cs" />
+    <Compile Include="Assets\Scripts\Tools\LookAtCamera.cs" />
     <Compile Include="Assets\Scripts\Tools\TimeTillDestroy.cs" />
     <Compile Include="Assets\Scripts\Tools\UVMoveScript.cs" />
     <Compile Include="Assets\Scripts\Tools\UseMatrix.cs" />
-    <Compile Include="Assets\Scripts\UI\LoadLevel.cs" />
+    <Compile Include="Assets\Scripts\UI\LevelManagerScript.cs" />
+    <Compile Include="Assets\Scripts\UI\MusicCredit.cs" />
     <Compile Include="Assets\Scripts\UI\OnHovering.cs" />
     <Compile Include="Assets\Scripts\UI\RainbowEmissive.cs" />
     <Compile Include="Assets\Scripts\UI\RainbowText.cs" />
@@ -114,6 +116,9 @@
     <None Include="Assets\Raving Bots\Shaders\Cartoon Explosion Ring.shader" />
     <None Include="Assets\Raving Bots\Shaders\Cartoon Explosion Two Color.shader" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+    <None Include="Assets\UI\Transitions\Curtains\Fonts.txt" />
+    <None Include="Assets\UI\Transitions\Curtains\License free.txt" />
+    <None Include="Assets\UI\Transitions\Curtains\License premium.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

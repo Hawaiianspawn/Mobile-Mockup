@@ -22,6 +22,8 @@ public class BoxColliderWin : MonoBehaviour {
                 Destroy(GetComponent<BoxCollider2D>());
             if (GetComponent<Animator>())
                 GetComponent<Animator>().SetBool("Win", true);
+            if (FindObjectOfType<LevelManagerScript>())
+                FindObjectOfType<LevelManagerScript>().LoadNextLevel();
         }
     }
 }

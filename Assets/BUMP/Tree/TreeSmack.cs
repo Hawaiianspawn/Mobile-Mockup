@@ -23,6 +23,7 @@ public class TreeSmack : MonoBehaviour {
         {
             Anim.Play("TreeCut");
             Destroy(this);
+            FindObjectOfType<LevelManagerScript>().LoadNextLevel(8f);
         }
         
     }

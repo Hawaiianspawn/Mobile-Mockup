@@ -107,6 +107,7 @@
     <Compile Include="Assets\Scripts\UI\OnHovering.cs" />
     <Compile Include="Assets\Scripts\UI\RainbowEmissive.cs" />
     <Compile Include="Assets\Scripts\UI\RainbowText.cs" />
+    <Compile Include="Assets\Scripts\UI\TransitionManager.cs" />
     <Compile Include="Assets\mouseDrag.cs" />
   </ItemGroup>
   <ItemGroup>

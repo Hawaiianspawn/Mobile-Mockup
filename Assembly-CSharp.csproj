@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A8378F14-09D7-8D02-C67D-AA8B24053075}</ProjectGuid>
+    <ProjectGuid>{4BFFC81B-2E3E-5368-8702-9A165391BD3C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -54,35 +54,37 @@
      <Compile Include="Assets\BLACKISH\SwipeControl\Scripts\C#\ImageDisplayXYVertical.cs" />
      <Compile Include="Assets\BLACKISH\SwipeControl\Scripts\C#\SwipeControl.cs" />
      <Compile Include="Assets\BLACKISH\SwipeControl\Scripts\C#\SwipeControlXY.cs" />
-     <Compile Include="Assets\Raving Bots\Scripts\CartoonExplosion\BaseAnimator.cs" />
-     <Compile Include="Assets\Raving Bots\Scripts\CartoonExplosion\BubbleAnimator.cs" />
-     <Compile Include="Assets\Raving Bots\Scripts\CartoonExplosion\CartoonExplosionFX.cs" />
-     <Compile Include="Assets\Raving Bots\Scripts\CartoonExplosion\CoreAnimator.cs" />
-     <Compile Include="Assets\Raving Bots\Scripts\CartoonExplosion\ExplosionAnimator.cs" />
-     <Compile Include="Assets\Raving Bots\Scripts\CartoonExplosion\FragmentAnimator.cs" />
-     <Compile Include="Assets\Raving Bots\Scripts\CartoonExplosion\RadialAnimator.cs" />
-     <Compile Include="Assets\Raving Bots\Scripts\CartoonExplosion\RingAnimator.cs" />
-     <Compile Include="Assets\Raving Bots\Scripts\CartoonExplosion\SparkAnimator.cs" />
-     <Compile Include="Assets\Raving Bots\Scripts\CartoonExplosion\TextAnimator.cs" />
-     <Compile Include="Assets\Raving Bots\Scripts\CartoonExplosion\WaveAnimator.cs" />
+     <Compile Include="Assets\BUMP\Tree\TreeSmack.cs" />
      <Compile Include="Assets\Scripts\Debuggers\TouchTest.cs" />
+     <Compile Include="Assets\Scripts\Mechanics\BoxColliderWin.cs" />
+     <Compile Include="Assets\Scripts\Mechanics\DragBasedScreen.cs" />
+     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\Tools\LimitChildren.cs" />
+     <Compile Include="Assets\Scripts\Tools\LookAtCamera.cs" />
      <Compile Include="Assets\Scripts\Tools\TimeTillDestroy.cs" />
      <Compile Include="Assets\Scripts\Tools\UVMoveScript.cs" />
-     <Compile Include="Assets\Scripts\UI\LoadLevel.cs" />
+     <Compile Include="Assets\Scripts\Tools\UseMatrix.cs" />
+     <Compile Include="Assets\Scripts\UI\LevelManagerScript.cs" />
+     <Compile Include="Assets\Scripts\UI\MusicCredit.cs" />
      <Compile Include="Assets\Scripts\UI\OnHovering.cs" />
      <Compile Include="Assets\Scripts\UI\RainbowEmissive.cs" />
      <Compile Include="Assets\Scripts\UI\RainbowText.cs" />
+     <Compile Include="Assets\Scripts\UI\TransitionManager.cs" />
+     <Compile Include="Assets\mouseDrag.cs" />
      <None Include="Assets\Raving Bots\Shaders\Cartoon Explosion Ring Particle.shader" />
-     <None Include="Assets\UI\Sourced\Basiliq\license.txt" />
+     <None Include="Assets\UI\Transitions\Curtains\License premium.txt" />
+     <None Include="Assets\UI\Transitions\Curtains\License free.txt" />
+     <None Include="Assets\UI\Transitions\Curtains\Fonts.txt" />
      <None Include="Assets\Raving Bots\Shaders\Cartoon Explosion Ring.shader" />
-     <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Raving Bots\Shaders\Cartoon Explosion Two Color.shader" />
      <None Include="Assets\Raving Bots\Shaders\Cartoon Explosion Ring Half.shader" />
      <None Include="Assets\Raving Bots\Fonts\Used Fonts Info.txt" />
- <Reference Include="UnityEngine.Analytics">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
@@ -90,11 +92,8 @@
  <Reference Include="nunit.framework">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/nunit.framework.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.Networking">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
@@ -102,10 +101,6 @@
  <Reference Include="UnityEngine.VR">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{953C8D68-5904-656E-EB32-F8113EC32E0E}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

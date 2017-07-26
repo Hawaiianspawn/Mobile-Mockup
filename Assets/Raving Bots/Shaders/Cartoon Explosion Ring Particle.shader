@@ -1,11 +1,15 @@
-// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
 Shader "FX/Cartoon Explosion/Ring Particle"
 {
 	Properties
 	{
-		_MainTex ("Sprite Texture", 2D) = "white" {}
-		_TintColor ("Tint", Color) = (1,1,1,0.5)
+		[PerRendererData] _MainTex ("Sprite Texture", 2D) = "white" {}
+		_TintColor ("Particle Tint", Color) = (1,1,1,0.5)
+		[MaterialToggle] PixelSnap ("Pixel snap", Float) = 0
+		[HideInInspector] _RendererColor ("RendererColor", Color) = (1,1,1,1)
+		[HideInInspector] _Flip ("Flip", Vector) = (1,1,1,1)
+		[PerRendererData] _AlphaTex ("External Alpha", 2D) = "white" {}
+		[PerRendererData] _EnableExternalAlpha ("Enable External Alpha", Float) = 0
 	}
 
 	SubShader
@@ -27,51 +31,36 @@ Shader "FX/Cartoon Explosion/Ring Particle"
 		Pass
 		{
 		CGPROGRAM
-			#pragma vertex vert
-			#pragma fragment frag
+			#pragma vertex TintVert
+			#pragma fragment MaskedFrag
 			#pragma target 2.0
+			#pragma multi_compile_instancing
+			#pragma multi_compile _ PIXELSNAP_ON
 			#pragma multi_compile _ ETC1_EXTERNAL_ALPHA
-			#include "UnityCG.cginc"
-			
-			struct appdata_t
-			{
-				float4 vertex   : POSITION;
-				float4 color    : COLOR;
-				float2 texcoord : TEXCOORD0;
-			};
-
-			struct v2f
-			{
-				float4 vertex   : SV_POSITION;
-				fixed4 color    : COLOR;
-				half2 texcoord  : TEXCOORD0;
-			};
+			#include "UnitySprites.cginc"
 			
 			fixed4 _TintColor;
-
-			v2f vert(appdata_t IN)
+			
+			v2f TintVert(appdata_t IN)
 			{
 				v2f OUT;
+
+				UNITY_SETUP_INSTANCE_ID (IN);
+				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(OUT);
+
+				#ifdef UNITY_INSTANCING_ENABLED
+				IN.vertex.xy *= _Flip.xy;
+				#endif
+
 				OUT.vertex = UnityObjectToClipPos(IN.vertex);
 				OUT.texcoord = IN.texcoord;
-				OUT.color = IN.color * _TintColor;
+				OUT.color = IN.color * _TintColor * _RendererColor;
+
+				#ifdef PIXELSNAP_ON
+				OUT.vertex = UnityPixelSnap (OUT.vertex);
+				#endif
 
 				return OUT;
-			}
-
-			sampler2D _MainTex;
-			sampler2D _AlphaTex;
-			
-			fixed4 SampleSpriteTexture (float2 uv)
-			{
-				fixed4 color = tex2D (_MainTex, uv);
-
-#if ETC1_EXTERNAL_ALPHA
-				// get the color from an external texture (usecase: Alpha support for ETC1 on android)
-				color.a = tex2D (_AlphaTex, uv).r;
-#endif //ETC1_EXTERNAL_ALPHA
-
-				return color;
 			}
 			
 			fixed SampleMask(float2 texcoord, fixed a)
@@ -84,7 +73,7 @@ Shader "FX/Cartoon Explosion/Ring Particle"
 				return SampleSpriteTexture(texcoord).a;
 			}
 			
-			fixed4 frag(v2f IN) : SV_Target
+			fixed4 MaskedFrag(v2f IN) : SV_Target
 			{
 				fixed a = IN.color.a < 1 ? SampleMask(IN.texcoord, 1 - IN.color.a) : 0;
 				IN.color.a = 1;

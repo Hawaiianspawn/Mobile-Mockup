@@ -5,12 +5,13 @@ using UnityEngine;
 public class TransitionManager : MonoBehaviour {
     protected Animator Anim;
     protected SpriteRenderer[] Children;
+    public GameObject TransitionLocation;
     bool OnOff;
 	// Use this for initialization
 	void Start () {
       //  DontDestroyOnLoad(this.gameObject);
-        Anim = GetComponent<Animator>();
-        Children = this.GetComponentsInChildren<SpriteRenderer>();
+        Anim = TransitionLocation.GetComponent<Animator>();
+        Children = TransitionLocation.GetComponentsInChildren<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
@@ -29,8 +30,8 @@ public class TransitionManager : MonoBehaviour {
         foreach (SpriteRenderer Sprite in Children)
             if (!Sprite.enabled)
                 Sprite.enabled = true;
-        Anim.Play("Close");
-        Anim.SetFloat("_speed", 1f);
+        Anim.Play("CurtainTransition");
+       // Anim.SetFloat("_speed", 1f);
     }
     void endTransition()
     {

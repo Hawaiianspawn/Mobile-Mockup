@@ -7,6 +7,7 @@ public class TreeSmack : MonoBehaviour {
 	public GameObject ObjectToBeHit;
 	public string ObjectName;
     public int Hits;
+    public GameObject SmashParticle;
 
 
 	private float dist;
@@ -25,17 +26,28 @@ public class TreeSmack : MonoBehaviour {
 	void Update () {
 		
 			// Code for OnMouseDown in the iPhone. Unquote to test.
-			RaycastHit hit = new RaycastHit();
+			
 			for (int i = 0; i < Input.touchCount; ++i) {
-				if (Input.GetTouch(i).phase.Equals(TouchPhase.Began)) {
+            RaycastHit hit = new RaycastHit();
+            if (Input.GetTouch(i).phase.Equals(TouchPhase.Began)) {
 					// Construct a ray from the current touch coordinates
 					Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
 					if (Physics.Raycast(ray, out hit)) {
 					Vector3 direction = hit.transform.position - hit.point;
-					hit.rigidbody.AddForceAtPosition(direction.normalized * 500f, hit.point);
-						//hit.transform.gameObject.SendMessage("OnMouseDown");
+                    if (hit.collider.gameObject)
+                    {
+                        hit.rigidbody.AddForceAtPosition(direction.normalized * 500f, hit.point);
+                        Instantiate(SmashParticle, hit.point, Quaternion.LookRotation(hit.point.normalized));   //hit.transform.gameObject.SendMessage("OnMouseDown");
+                        if (++Hits > 20f)
+                        {
+                            Destroy(this.transform.GetChild(0).gameObject.GetComponent<CharacterJoint>());
+                            FindObjectOfType<LevelManagerScript>().LoadLevel(0);
+                            Destroy(this.GetComponent<TreeSmack>());
 
-					}
+                        }
+                    }
+
+                }
 				}
 			}
 		}
@@ -48,9 +60,15 @@ public class TreeSmack : MonoBehaviour {
         if (Hits > 20f)
         {
             Anim.Play("TreeCut");
-            Destroy(this);
-            FindObjectOfType<LevelManagerScript>().LoadNextLevel(8f);
+
         }
-		 
-}
+
+
+    }
+    IEnumerator WaitNLoad()
+    {
+        yield return new WaitForSeconds(.2f);
+        Destroy(this.GetComponent<TreeSmack>());
+
+    }
 }

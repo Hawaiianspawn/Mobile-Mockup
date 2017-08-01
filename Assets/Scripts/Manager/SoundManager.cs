@@ -28,11 +28,15 @@ public class SoundManager : MonoBehaviour
 
 
     //Used to play single sound clips.
-    public void PlaySingle(AudioClip clip)
+    public void PlaySingle(AudioClip clip, bool _Random)
     {
         //Set the clip of our efxSource audio source to the clip passed in as a parameter.
         SfxSource.clip = clip;
-
+        if (_Random)
+        {
+            float randomPitch = Random.Range(lowPitchRange, highPitchRange);
+            SfxSource.pitch = randomPitch;
+        }
         //Play the clip.
         SfxSource.Play();
     }

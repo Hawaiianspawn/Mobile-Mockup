@@ -23,7 +23,7 @@ public class BoxColliderWin : MonoBehaviour {
             if (GetComponent<Animator>())
                 GetComponent<Animator>().SetBool("Win", true);
             if (FindObjectOfType<LevelManagerScript>())
-                FindObjectOfType<LevelManagerScript>().LoadNextLevel();
+                FindObjectOfType<LevelManagerScript>().LoadLevel(0);
         }
     }
 }

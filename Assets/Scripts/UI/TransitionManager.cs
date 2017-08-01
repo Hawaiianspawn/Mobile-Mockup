@@ -26,21 +26,21 @@ public class TransitionManager : MonoBehaviour {
 	}
     public void startTranisiton()
     {
-        OnOff = true;
-  
+        Instantiate(TransitionLocation);
+  //
         //foreach (SpriteRenderer Sprite in Children)
         //    if (!Sprite.enabled)
         //        Sprite.enabled = true;
-        Anim.Play("CurtainTransition");
-        Anim.SetFloat("_speed", 1f);
+       // Anim.Play("CurtainTransition");
+      //  Anim.SetFloat("_speed", 1f);
     }
     public void endTransition()
     {
 
-        OnOff = false;
+       OnOff = false;
         
-        Anim.SetFloat("_speed", -1.5f);
-        Anim.Play("CurtainTransition", 0, 1f);
+        //Anim.SetFloat("_speed", -1.5f);
+       // Anim.Play("CurtainTransition", 0, 1f);
     }
 
     

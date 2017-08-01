@@ -15,21 +15,24 @@ public class LevelManagerScript : MonoBehaviour
     }
     public void LoadLevel(int i)
     {
-        TranisitionRef.startTranisiton();
-        StartCoroutine(WaitNLoad(2f, i));
+        TranisitionRef = GetComponent<TransitionManager>();
+        StartCoroutine(WaitNLoad(3f, i));
     }
 
     public void LoadBumpTransition()
     {
+        TranisitionRef = GetComponent<TransitionManager>();
         SceneManager.LoadScene(Levels[0]);
     }
     
     public void LoadNextLevel()
     {
-        StartCoroutine(WaitNLoad(2f, ++index));
+        TranisitionRef = GetComponent<TransitionManager>();
+        StartCoroutine(WaitNLoad(3f, ++index));
     }
     public void LoadNextLevel(float _time)
     {
+        TranisitionRef = GetComponent<TransitionManager>();
         StartCoroutine(WaitNLoad(_time, ++index));
     }
     public IEnumerator WaitNLoad(float _time, int i)
@@ -37,6 +40,5 @@ public class LevelManagerScript : MonoBehaviour
         TranisitionRef.startTranisiton();
         yield return new WaitForSeconds(_time);
         SceneManager.LoadScene(Levels[i]);
-        TranisitionRef.startTranisiton();
     }
 }

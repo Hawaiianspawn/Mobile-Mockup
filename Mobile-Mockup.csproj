@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E9A9FF3F-53E7-7950-1DEA-6E4E812F840F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneOSXIntel64:27</UnityBuildTarget>
+    <UnityVersion>5.6.2f1</UnityVersion>
+    <RootNamespace></RootNamespace>
+    <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_2;UNITY_5_6;UNITY_5;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;CROSS_PLATFORM_INPUT</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_2;UNITY_5_6;UNITY_5;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;CROSS_PLATFORM_INPUT</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>Library\UnityAssemblies\UnityEngine.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>Library\UnityAssemblies\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VR">
+      <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Mobile-Mockup.Plugins.csproj">
+      <Project>{E230484F-A39C-EF72-D550-A127EEF54206}</Project>
+      <Name>Mobile-Mockup.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\BLACKISH\SwipeControl\Scripts\C#\CreditsDisplay.cs" />
+    <Compile Include="Assets\BLACKISH\SwipeControl\Scripts\C#\ExampleGUIBorders.cs" />
+    <Compile Include="Assets\BLACKISH\SwipeControl\Scripts\C#\ImageDisplay.cs" />
+    <Compile Include="Assets\BLACKISH\SwipeControl\Scripts\C#\ImageDisplayNoFade.cs" />
+    <Compile Include="Assets\BLACKISH\SwipeControl\Scripts\C#\ImageDisplayXYHorizontal.cs" />
+    <Compile Include="Assets\BLACKISH\SwipeControl\Scripts\C#\ImageDisplayXYVertical.cs" />
+    <Compile Include="Assets\BLACKISH\SwipeControl\Scripts\C#\SwipeControl.cs" />
+    <Compile Include="Assets\BLACKISH\SwipeControl\Scripts\C#\SwipeControlXY.cs" />
+    <Compile Include="Assets\BUMP\Tree\TreeSmack.cs" />
+    <Compile Include="Assets\Raving Bots\Scripts\CartoonExplosion\BaseAnimator.cs" />
+    <Compile Include="Assets\Raving Bots\Scripts\CartoonExplosion\BubbleAnimator.cs" />
+    <Compile Include="Assets\Raving Bots\Scripts\CartoonExplosion\CartoonExplosionFX.cs" />
+    <Compile Include="Assets\Raving Bots\Scripts\CartoonExplosion\CoreAnimator.cs" />
+    <Compile Include="Assets\Raving Bots\Scripts\CartoonExplosion\ExplosionAnimator.cs" />
+    <Compile Include="Assets\Raving Bots\Scripts\CartoonExplosion\FragmentAnimator.cs" />
+    <Compile Include="Assets\Raving Bots\Scripts\CartoonExplosion\RadialAnimator.cs" />
+    <Compile Include="Assets\Raving Bots\Scripts\CartoonExplosion\RingAnimator.cs" />
+    <Compile Include="Assets\Raving Bots\Scripts\CartoonExplosion\SparkAnimator.cs" />
+    <Compile Include="Assets\Raving Bots\Scripts\CartoonExplosion\TextAnimator.cs" />
+    <Compile Include="Assets\Raving Bots\Scripts\CartoonExplosion\WaveAnimator.cs" />
+    <Compile Include="Assets\Scripts\Debuggers\TouchTest.cs" />
+    <Compile Include="Assets\Scripts\Manager\LoadRandomBumpLevel.cs" />
+    <Compile Include="Assets\Scripts\Manager\NextLevelManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\NotificationManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\Mechanics\BoxColliderWin.cs" />
+    <Compile Include="Assets\Scripts\Mechanics\DragBasedScreen.cs" />
+    <Compile Include="Assets\Scripts\Mechanics\SoundMechanic.cs" />
+    <Compile Include="Assets\Scripts\Mechanics\VolumeSliderMechanic.cs" />
+    <Compile Include="Assets\Scripts\Mechanics\VolumeToMove.cs" />
+    <Compile Include="Assets\Scripts\Mechanics\VolumeToWin.cs" />
+    <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Scripts\Tools\DontDestory.cs" />
+    <Compile Include="Assets\Scripts\Tools\LimitChildren.cs" />
+    <Compile Include="Assets\Scripts\Tools\LookAtCamera.cs" />
+    <Compile Include="Assets\Scripts\Tools\RandomizeBump.cs" />
+    <Compile Include="Assets\Scripts\Tools\RandomizeSoundScript.cs" />
+    <Compile Include="Assets\Scripts\Tools\SendSFX.cs" />
+    <Compile Include="Assets\Scripts\Tools\SendToSoundManager.cs" />
+    <Compile Include="Assets\Scripts\Tools\TimeTillDestroy.cs" />
+    <Compile Include="Assets\Scripts\Tools\UVMoveScript.cs" />
+    <Compile Include="Assets\Scripts\Tools\UseMatrix.cs" />
+    <Compile Include="Assets\Scripts\UI\LevelManagerScript.cs" />
+    <Compile Include="Assets\Scripts\UI\MusicCredit.cs" />
+    <Compile Include="Assets\Scripts\UI\OnHovering.cs" />
+    <Compile Include="Assets\Scripts\UI\RainbowEmissive.cs" />
+    <Compile Include="Assets\Scripts\UI\RainbowText.cs" />
+    <Compile Include="Assets\Scripts\UI\TransitionManager.cs" />
+    <Compile Include="Assets\Vortex Game Studios\Dithering Filter\DitherFilter.cs" />
+    <Compile Include="Assets\Vortex Game Studios\FilterBehavior\FilterBehaviour.cs" />
+    <Compile Include="Assets\Vortex Game Studios\Pixelated Filter\PixelatedFilter.cs" />
+    <Compile Include="Assets\Vortex Game Studios\SGB Filter\SGBFilter.cs" />
+    <Compile Include="Assets\mouseDrag.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Raving Bots\Fonts\Used Fonts Info.txt" />
+    <None Include="Assets\Raving Bots\Shaders\Cartoon Explosion Ring Half.shader" />
+    <None Include="Assets\Raving Bots\Shaders\Cartoon Explosion Ring Particle.shader" />
+    <None Include="Assets\Raving Bots\Shaders\Cartoon Explosion Ring.shader" />
+    <None Include="Assets\Raving Bots\Shaders\Cartoon Explosion Two Color.shader" />
+    <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
+    <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />
+    <None Include="Assets\UI\Transitions\Curtains\Fonts.txt" />
+    <None Include="Assets\UI\Transitions\Curtains\License free.txt" />
+    <None Include="Assets\UI\Transitions\Curtains\License premium.txt" />
+    <None Include="Assets\Vortex Game Studios\Dithering Filter\DitherFilter.shader" />
+    <None Include="Assets\Vortex Game Studios\Pixelated Filter\pixelated.shader" />
+    <None Include="Assets\Vortex Game Studios\SGB Filter\SGBFilter.shader" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+</Project>

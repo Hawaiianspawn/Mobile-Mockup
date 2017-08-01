@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NextLevelManager : MonoBehaviour {
 
-void CallNextLevel()
+public void CallNextLevel()
     {
         FindObjectOfType<LevelManagerScript>().LoadNextLevel();
     }

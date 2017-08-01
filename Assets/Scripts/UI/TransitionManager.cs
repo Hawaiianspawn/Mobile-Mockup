@@ -6,6 +6,7 @@ public class TransitionManager : MonoBehaviour {
     protected Animator Anim;
     protected SpriteRenderer[] Children;
     public GameObject TransitionLocation;
+    public bool Transitioning;
     bool OnOff;
 	// Use this for initialization
 	void Start () {
@@ -23,31 +24,24 @@ public class TransitionManager : MonoBehaviour {
                 startTranisiton();
                 }
 	}
-    void startTranisiton()
+    public void startTranisiton()
     {
         OnOff = true;
-
-        foreach (SpriteRenderer Sprite in Children)
-            if (!Sprite.enabled)
-                Sprite.enabled = true;
+  
+        //foreach (SpriteRenderer Sprite in Children)
+        //    if (!Sprite.enabled)
+        //        Sprite.enabled = true;
         Anim.Play("CurtainTransition");
-       // Anim.SetFloat("_speed", 1f);
+        Anim.SetFloat("_speed", 1f);
     }
-    void endTransition()
+    public void endTransition()
     {
 
         OnOff = false;
-        Anim.SetFloat("_speed", -2.5f);
-        StartCoroutine(waitAndHide());
+        
+        Anim.SetFloat("_speed", -1.5f);
+        Anim.Play("CurtainTransition", 0, 1f);
     }
 
-    IEnumerator waitAndHide()
-    {
-        if(Children[0].enabled)
-            yield return new WaitForSeconds(3f);
-        foreach (SpriteRenderer Sprite in Children)
-            if (Sprite.enabled)
-                Sprite.enabled = false;
-
-    }
+    
 }

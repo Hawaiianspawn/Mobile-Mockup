@@ -18,16 +18,21 @@ public class VolumeSliderMechanic : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (slider.value == 1)
+        if (slider.value <= 0.02)
+        {
             WinState();
-        anim.Play("OperaCurtains", -1, slider.value);
-        
+            anim.Play("OperaCurtains", -1, slider.normalizedValue);
+        }
+        else
+            anim.Play("OperaCurtains", -1, 1 - slider.normalizedValue);
     }
 
     public void WinState()
     {
+        slider.enabled = false;
         FindObjectOfType<LevelManagerScript>().index = 0;
         StartCoroutine(WaitNLoad());
+
     }
     IEnumerator WaitNLoad()
     {
